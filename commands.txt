@@ -1,0 +1,5 @@
+docker run -p 4040:4040 -d --rm --name=ngrok --net=func_functions alexellis2/ngrok-admin http gateway:8080
+
+faas-cli template pull https://github.com/distantcam/csharp-webrequest-template
+
+faas-cli new --lang csharp-webrequest github --append stack.yml

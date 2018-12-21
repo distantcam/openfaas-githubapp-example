@@ -1,0 +1,10 @@
+provider:
+  name: faas
+  gateway: http://127.0.0.1:8080
+functions:
+  github:
+    lang: csharp-webrequest
+    handler: ./github
+    image: distantcam/github:latest
+    environment_file:
+    - env.yml
